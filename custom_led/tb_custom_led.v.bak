@@ -1,0 +1,27 @@
+`timescale 1ns/1ps
+
+module tb_custom_led();
+	reg [1:0] address;
+	reg chipselect;
+	reg clk;
+	reg read;
+	reg reset_n;
+	reg write;
+	reg [31:0] writedata;
+	wire [9:0] led_out;
+	wire [31:0] readdata;
+	
+	custom_led dut(
+	.address(address),
+	.chipselect(chípselect),
+	.clk(clk),
+	.read(read),
+	.reset_n(reset_n),
+	.write(write),
+	.writedata(writedata),
+	.led_out(led_out),
+	.readdata.(readdata)
+	);
+
+
+endmodule
